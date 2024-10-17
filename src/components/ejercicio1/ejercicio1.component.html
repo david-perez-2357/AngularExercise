@@ -1,0 +1,13 @@
+<span class="m-0 text-2xl">Ejercicio 1</span>
+<p class="m-0 text-gray-500">Saluda a la persona que se identifica en el input</p>
+<mat-form-field>
+  <mat-label>Nombre</mat-label>
+  <input matInput [(ngModel)]="name" placeholder="Nombre">
+</mat-form-field>
+<hr class="my-4"/>
+@if(name!='') {
+  <span>Hola {{name}}!</span>
+} @else {
+  <span>Escribe tu nombre</span>
+}
+
