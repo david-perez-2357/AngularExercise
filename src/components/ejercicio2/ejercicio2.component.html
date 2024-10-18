@@ -1,0 +1,34 @@
+
+<div class="flex justify-between w-full">
+  <div>
+    <span class="m-0 text-2xl">Ejercicio 2</span>
+    <p class="m-0 text-gray-500">Reloj en tiempo real con control de pausa</p>
+  </div>
+  <button mat-flat-button color="primary" (click)="clearInterval()">Parar reloj</button>
+</div>
+
+<mat-grid-list cols="3" data-ng-model="updateDate">
+  <mat-grid-tile>
+    <div class="flex flex-col align-items-center justify-center gap-5 text-center">
+      <span class="text-lg text-gray-500">Horas</span>
+      <mat-progress-spinner mode="determinate" value="{{ hours / 24 * 100 }}"></mat-progress-spinner>
+      <h3 class="m-0">{{ hours }}</h3>
+    </div>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <div class="flex flex-col align-items-center justify-center gap-5 text-center">
+      <span class="text-lg text-gray-500">Minutos</span>
+      <mat-progress-spinner mode="determinate" value="{{ minutes / 60 * 100 }}"></mat-progress-spinner>
+      <h3 class="m-0">{{ minutes }}</h3>
+    </div>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <div class="flex flex-col align-items-center justify-center gap-5 text-center">
+      <span class="text-lg text-gray-500">Segundos</span>
+      <mat-progress-spinner mode="determinate" value="{{ seconds / 60 * 100 }}"></mat-progress-spinner>
+      <h3 class="m-0">{{ seconds }}</h3>
+    </div>
+  </mat-grid-tile>
+</mat-grid-list>
+
+

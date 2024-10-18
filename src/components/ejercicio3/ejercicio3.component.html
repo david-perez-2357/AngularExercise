@@ -1,0 +1,14 @@
+
+<span class="m-0 text-2xl">Ejercicio 3</span>
+<p class="m-0 text-gray-500">Mostrar y añadir tareas en una lista</p>
+
+<mat-form-field class="w-full mt-6">
+  <mat-label>Añadir tarea</mat-label>
+  <input matInput [(ngModel)]="newTask" (keyup.enter)="addTask(newTask);">
+</mat-form-field>
+
+<mat-chip-set class="mat-mdc-chip-set-stacked" aria-label="List of tasks">
+  @for (task of tasks; track task) {
+    <mat-chip-option>{{task}}</mat-chip-option>
+  }
+</mat-chip-set>
