@@ -1,0 +1,5 @@
+
+<mat-form-field class="w-full mt-6">
+  <mat-label>Escribe aquí tu comentario...</mat-label>
+  <input matInput type="text" (keydown.enter)="addComment()" [(ngModel)]="comment">
+</mat-form-field>

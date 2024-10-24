@@ -1,0 +1,12 @@
+<div>
+  <span class="text-2xl">Ejercicio 5</span>
+  <p class="m-0 text-gray-500 dark:text-gray-400">Componente de Comentarios con &#64;Output()
+</div>
+
+<app-comment-input (commentAdded)="createComment($event)"/>
+<span *ngIf="comments.length == 0">
+  No hay comentarios
+</span>
+<app-comment *ngFor=" let comment of comments">
+  {{ comment }}
+</app-comment>

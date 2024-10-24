@@ -1,0 +1,21 @@
+<h2 mat-dialog-title>Añadir producto</h2>
+<div class="grid grid-cols-2 justify-between w-full px-10 gap-x-5">
+  <mat-form-field>
+    <mat-label>Nombre</mat-label>
+    <input matInput [(ngModel)] = "product.name" />
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Precio</mat-label>
+    <input step="0.1" type="number" matInput [(ngModel)]="product.price" />
+  </mat-form-field>
+
+  <mat-form-field class="col-span-2">
+    <mat-label>Imagen</mat-label>
+    <input matInput [(ngModel)]="product.image" />
+  </mat-form-field>
+</div>
+<mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancelar</button>
+  <button mat-button cdkFocusInitial (click)="createProduct()">Añadir</button>
+</mat-dialog-actions>
