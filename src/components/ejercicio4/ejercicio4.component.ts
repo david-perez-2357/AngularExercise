@@ -20,7 +20,6 @@ import {NgIf} from '@angular/common';
     NgIf
   ],
   templateUrl: './ejercicio4.component.html',
-  styleUrl: './ejercicio4.component.css'
 })
 export class Ejercicio4Component {
   seconds : number = 0;

@@ -15,7 +15,6 @@ const name = 'David';
     FormsModule
   ],
   templateUrl: './ejercicio1.component.html',
-  styleUrl: './ejercicio1.component.css'
 })
 export class Ejercicio1Component {
   name: string = name;

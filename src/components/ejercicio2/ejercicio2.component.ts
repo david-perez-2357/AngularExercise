@@ -13,7 +13,6 @@ import {interval} from 'rxjs';
     MatButtonModule
   ],
   templateUrl: './ejercicio2.component.html',
-  styleUrl: './ejercicio2.component.css'
 })
 
 export class Ejercicio2Component {

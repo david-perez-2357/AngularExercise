@@ -17,7 +17,6 @@ import {FormsModule} from '@angular/forms';
     FormsModule
   ],
   templateUrl: './ejercicio3.component.html',
-  styleUrl: './ejercicio3.component.css'
 })
 export class Ejercicio3Component {
   tasks: string[] = ['Pasear al perro', 'Hacer la compra', 'Estudiar Angular'];
