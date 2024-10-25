@@ -1,0 +1,30 @@
+<div class="flex justify-between w-full">
+  <div>
+    <span class="text-2xl">Ejercicio 7</span>
+    <p class="m-0 text-gray-500 dark:text-gray-400">Calculadora básica con suma, resta, multiplicación y división</p>
+  </div>
+</div>
+
+<div class="flex gap-3 mt-3 items-start">
+  <mat-form-field>
+    <mat-label>Primer número</mat-label>
+    <input matInput [(ngModel)]="numero1" type="number">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Operador</mat-label>
+    <mat-select [(value)]="operadorActual" (selectionChange)="operadorActual = $event.value">
+      @for (operador of operadores; track operador) {
+        <mat-option [value]="operador">{{operador.name}}</mat-option>
+      }
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Segundo número</mat-label>
+    <input matInput [(ngModel)]="numero2" type="number">
+  </mat-form-field>
+
+  <button mat-flat-button color="primary" class="mt-3" (click)="calcular()">Calcular</button>
+</div>
+

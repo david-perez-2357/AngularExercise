@@ -5,6 +5,8 @@ import {Ejercicio3Component} from '../components/ejercicio3/ejercicio3.component
 import {Ejercicio4Component} from '../components/ejercicio4/ejercicio4.component';
 import {Ejercicio5Component} from '../components/ejercicio5/ejercicio5.component';
 import {Ejercicio6Component} from '../components/ejercicio6/ejercicio6.component';
+import {Ejercicio7Component} from '../components/ejercicio7/ejercicio7.component';
+import {Ejercicio8Component} from '../components/ejercicio8/ejercicio8.component';
 
 export const routes: Routes = [
   {path: '', redirectTo: 'ejercicio1', pathMatch: 'full'},
@@ -14,5 +16,7 @@ export const routes: Routes = [
   {'path': 'ejercicio4', 'component': Ejercicio4Component},
   {'path': 'ejercicio5', 'component': Ejercicio5Component},
   {'path': 'ejercicio6', 'component': Ejercicio6Component},
+  {'path': 'ejercicio7', 'component': Ejercicio7Component},
+  {'path': 'ejercicio8', 'component': Ejercicio8Component},
   {'path': '**', 'component': Ejercicio1Component}
 ];
