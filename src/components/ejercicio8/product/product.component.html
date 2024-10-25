@@ -1,0 +1,30 @@
+<mat-card class="w-[300px]">
+  <mat-card-content>
+    <mat-card-title class="w-full text-center p-3">
+      <div class="flex w-full justify-between items-center">
+        <span>{{ name }}</span>
+        <span class="text-2xl">
+          {{ price }} €
+        </span>
+      </div>
+    </mat-card-title>
+
+    <div class="flex justify-center items-center flex-col">
+      <img mat-card-image src="{{ image }}" alt="{{ name }}" class="w-[200px] h-[200px] object-contain"/>
+    </div>
+
+  </mat-card-content>
+  <mat-card-actions class="flex justify-center mt-3 gap-4 mb-3">
+    <button mat-mini-fab (click)="quantity = quantity - 1" [disabled]="quantity === 0">
+      <mat-icon fontIcon="remove"/>
+    </button>
+
+    <span class="text-2xl">
+      {{ quantity }}
+    </span>
+
+    <button mat-mini-fab (click)="quantity = quantity + 1">
+      <mat-icon fontIcon="add"/>
+    </button>
+  </mat-card-actions>
+</mat-card>
