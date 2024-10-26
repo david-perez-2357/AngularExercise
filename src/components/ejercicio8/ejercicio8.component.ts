@@ -2,7 +2,8 @@ import { Component } from '@angular/core';
 import {Ejercicio7Component} from '../ejercicio7/ejercicio7.component';
 import {ProductComponent} from './product/product.component';
 import {of} from 'rxjs';
-import {NgForOf} from '@angular/common';
+import {NgForOf, NgIf} from '@angular/common';
+import {MatCard, MatCardContent, MatCardHeader, MatCardTitle} from '@angular/material/card';
 
 interface Product {
   name: string;
@@ -16,7 +17,12 @@ interface Product {
   standalone: true,
   imports: [
     ProductComponent,
-    NgForOf
+    NgForOf,
+    MatCard,
+    MatCardHeader,
+    MatCardContent,
+    MatCardTitle,
+    NgIf
   ],
   templateUrl: './ejercicio8.component.html',
   styles: ``
@@ -42,5 +48,8 @@ export class Ejercicio8Component {
       quantity: 0
     }
   ];
-  protected readonly of = of;
+
+  getTotal(): number {
+    return this.products.reduce((acc, product) => acc + product.price * product.quantity, 0);
+  }
 }
